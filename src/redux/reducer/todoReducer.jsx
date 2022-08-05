@@ -14,7 +14,12 @@ const initialState = {
 const todoReducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case ADD:
-      return {};
+      return {
+        todoList: [
+          ...state.todoList,
+          { id: new Date().getTime(), text: payload, completed: false },
+        ],
+      };
     case EDIT:
       return {};
     case DELETE:

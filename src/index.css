@@ -22,3 +22,16 @@ code {
   /* border-color: crimson !important; */
   box-shadow: 0 0 0 0.2rem rgba(217, 83, 79, 0.7) !important;
 }
+.todo-list {
+  min-width: 400px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 10px;
+}
+.todoText {
+  /* width: 75%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
