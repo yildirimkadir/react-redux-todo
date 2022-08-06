@@ -3,15 +3,18 @@ import { BsFillTrashFill } from "react-icons/bs";
 import { AiFillEdit } from "react-icons/ai";
 
 const TodoItem = ({ id, text, completed }) => {
+  const handleDelete = () => {};
+  const handleEdit = () => {};
+
   return (
     <div className="todo-list">
       <h2 className="todoText">{text}</h2>
       <div>
         <span>
-          <BsFillTrashFill />
+          <BsFillTrashFill onClick={handleDelete} />
         </span>
         <span>
-          <AiFillEdit />
+          <AiFillEdit onClick={handleEdit} />
         </span>
       </div>
     </div>
