@@ -23,7 +23,7 @@ const todoReducer = (state = initialState, { type, payload }) => {
     case EDIT:
       return {};
     case DELETE:
-      return {};
+      return state.todoList.filter((todo) => todo.id !== payload.id);
 
     default:
       return state;
