@@ -4,9 +4,9 @@ import { ADD, DELETE, EDIT } from "../types/todoTypes";
 const initialState = {
   todoList: [
     {
-      id: new Date().getTime(),
+      id: "",
       text: "",
-      completed: false,
+      completed: "",
     },
   ],
 };
@@ -20,10 +20,16 @@ const todoReducer = (state = initialState, { type, payload }) => {
           { id: new Date().getTime(), text: payload, completed: false },
         ],
       };
-    case EDIT:
-      return {};
+    // case EDIT:
+    //   const edited = state.todoList.filter((item) => item.id === payload).map((item)=>({text: payload}) )
+    //   return {
+    //     todoList: edited
+    //   };
     case DELETE:
-      return state.todoList.filter((todo) => todo.id !== payload.id);
+      const filtered = state.todoList.filter((item) => item.id !== payload);
+      return {
+        todoList: filtered,
+      };
 
     default:
       return state;

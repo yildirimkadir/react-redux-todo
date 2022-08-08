@@ -10,19 +10,18 @@ const TodoItem = ({ id, text, completed }) => {
   const handleDelete = (id) => {
     dispatch(delete_todo(id));
   };
-  const handleEdit = () => {};
+  // const handleEdit = (id) => {
+  //    text-decoration: line-through;
+  // };
 
   return (
     <div className="todo-list">
       <h2 className="todoText">{text}</h2>
-      <div>
+      {text ? (
         <span>
-          <BsFillTrashFill onClick={handleDelete} />
+          <BsFillTrashFill onClick={() => handleDelete(id)} />
         </span>
-        <span>
-          <AiFillEdit onClick={handleEdit} />
-        </span>
-      </div>
+      ) : null}
     </div>
   );
 };
