@@ -23,11 +23,11 @@ code {
   box-shadow: 0 0 0 0.2rem rgba(217, 83, 79, 0.7) !important;
 }
 .todo-list {
-  min-width: 400px;
+  width: 500px;
   display: flex;
   justify-content: space-between;
   padding: 10px;
-  margin: 10px;
+  margin: 10px auto;
 }
 .todoText {
   /* width: 75%; */

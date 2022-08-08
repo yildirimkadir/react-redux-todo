@@ -28,6 +28,7 @@ const Todoinput = () => {
           aria-describedby="button-addon2"
           onChange={(e) => setItem(e.target.value)}
           value={item}
+          maxLength={20}
         />
         <div className="input-group-append">
           <button
